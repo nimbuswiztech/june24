@@ -6,6 +6,4 @@ echo "$1 is big"
 else 
 echo "$2 is big"
 fi
-
-
 echo "$#"
