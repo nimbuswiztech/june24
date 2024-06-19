@@ -1,0 +1,47 @@
+Git Day 2
+The sequence of commands you have listed pertains to setting up Git, generating SSH keys, and performing various Git operations. Here's an overview of what each command does:
+git confi g --global user.name "nimbuswiztech2"
+git confi g --global user.email "nimbuswiztech2@gmail.com"
+These commands set the global Git username and email.
+ssh-keygen -t rsa -b 4096 -C "nimbuswiztech2@gmail.com"
+cat /home/ec2-user/.ssh/id_rsa.pub
+These commands generate a new SSH key with RSA 4096-bit encryption and output the public key.
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+These commands start the SSH agent and add the generated SSH private key to the agent.
+git clone https://github.com/nimbuswiztech2/jun24.git
+git clone git@github.com:nimbuswiztech2/jun24.git
+git clone https://github.com/nimbuswiztech2/private.git
+These commands clone repositories from GitHub using both HTTPS and SSH protocols.
+git pull https://github.com/nimbuswiztech2/jun24.git
+This command pulls the latest changes from the remote repository.
+Confi gure Git User:
+Generate SSH Key:
+Add SSH Key to SSH Agent:
+Clone Repositories:
+Pull from Remote Repository:
+Push Changes:
+git push https://github.com/nimbuswiztech2/jun24.git
+git push --set-upstream https://github.com/nimbuswiztech2/jun24.git master
+git push
+These commands push changes to the remote repository. The
+--set-upstream
+option sets the upstream (remote tracking) branch.
+git remote -v
+git remote add -m --master jun24 https://github.com/nimbuswiztech2/jun24.git
+git remote -v
+These commands display the current remote repositories and add a new remote repository with the name
+jun24
+.
+git confi g --global credential.helper store
+This command confi gures Git to store your credentials, so you don't have to enter them every time.
+git pull
+This command pulls the latest changes from the currently confi gured upstream branch.
+If you encounter issues, ensure that:
+View and Add Remote Repositories:
+Confi gure Git to Store Credentials:
+Pull Changes:
+Your SSH key has been added to your GitHub account.
+The repository URLs are correct.
+You have the necessary permissions for the repositories.
+Your credentials are correctly stored and used.
